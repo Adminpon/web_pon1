@@ -1,0 +1,139 @@
+/* css/style.css */
+
+/* General Styles */
+body {
+    background: linear-gradient(to bottom, #66ccff, #ffffff);
+}
+
+a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+/* Existing Place List Styles (Keep these) */
+.place-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.place-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 352px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.place-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.place-card h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.place-card p {
+    color: #666;
+}
+
+.all-000 {
+    text-align: center;
+}
+.h3 {
+    
+    color: #000000; /* สีดำเข้ม */
+}
+
+
+.overflow-hidden {
+    height: 51px;
+    
+}
+
+textarea#comment {
+    border: revert-layer;
+}
+
+.list-group{
+    overflow: auto;
+    height: 200px;
+   
+}
+
+.star-rating {
+    display: inline-block;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    background: url('../icon/star-empty.png') no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.star.filled {
+    background: url('../icon/star-filled.png') no-repeat center center;
+    background-size: contain;
+}
+
+.star-wrap {
+    display: inline-block;
+    direction: rtl; /* ให้เริ่มจากขวาไปซ้าย */
+}
+
+.star-wrap input[type="radio"] {
+    display: none; /* ซ่อน input radio */
+}
+
+.star-wrap label {
+    width: 30px;
+    height: 30px;
+    background: url('../icon/star-empty.png') no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.star-wrap input[type="radio"]:checked ~ label {
+    background: url('../icon/star-filled.png') no-repeat center center;
+    background-size: contain;
+}
+
+.star-wrap input[type="radio"]:checked ~ label:hover {
+    background: url('../icon/star-filled.png') no-repeat center center;
+    background-size: contain;
+}
+
+.skip-button {
+    cursor: pointer;
+}
+
+form.border.p-4.rounded {
+    background-color: white;
+}
+
+/* ขนาดภาพสำหรับหน้าจอปกติ */
+.carousel-item img {
+    width: 695px;
+    height: 519px;
+    object-fit: cover; /* ทำให้ภาพครอบพื้นที่ที่กำหนดโดยไม่ทำให้ภาพบิดเบี้ยว */
+}
+
+/* ใช้ Media Query สำหรับหน้าจอเล็ก (เช่น มือถือ) */
+@media (max-width: 768px) {
+        .carousel-item img {
+        width: 202px;
+        height: 250px;
+        object-fit: cover; /* ครอบภาพให้เต็มพื้นที่โดยไม่บิดเบี้ยว */
+    }
+}
+
